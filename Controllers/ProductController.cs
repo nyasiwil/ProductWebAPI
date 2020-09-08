@@ -11,7 +11,7 @@ namespace ProductWebAPI.Controllers
     [Route("api/[controller]")]
     public class ProductController : Controller
     {
-       
+
 
         private readonly IProductRepo _productRepo;
 
@@ -44,7 +44,7 @@ namespace ProductWebAPI.Controllers
 
                 product = _productRepo.GetProduct(id);
 
-                if (product !=null)
+                if (product != null)
                 {
                     return Ok(product);
                 }
@@ -54,9 +54,11 @@ namespace ProductWebAPI.Controllers
 
                 }
 
-                }
-                catch (Exception ex)
-                {
+            }
+            catch (Exception ex)
+            {
                 return BadRequest(ex);
             }
         }
+    }
+}
